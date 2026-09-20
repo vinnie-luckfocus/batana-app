@@ -51,10 +51,18 @@ lib/
   sync/       云同步客户端（sync-api）
   ui/         页面与组件
 platform/     平台差异适配说明（240fps 高帧率通道、BLE 差异）
+spikes/       技术验证 spike（与正式代码隔离）
+  hfr_probe/  M0-V3：240fps 高帧率采集探针（iOS/Android 真机）
 test/         测试
 docs/
   contracts/  契约文档
 ```
+
+## 变更记录
+
+| 版本 | 日期 | 变更内容 | 同步 |
+| --- | --- | --- | --- |
+| 0.1-draft | 2026-09-20 | 新增 M0-V3 验证 spike `spikes/hfr_probe/`：平台通道直连 AVFoundation/Camera2 枚举高帧率档位、10 分钟采集统计（实际帧率/抖动 p50·p95·max/掉帧）、报告页 + CSV 导出；本机 `flutter test` 5 项全绿、`flutter analyze` 无问题；真机 240fps 实测待手机验证 | 待同步司令塔 repos.yaml |
 
 ## 生态与司令塔
 
